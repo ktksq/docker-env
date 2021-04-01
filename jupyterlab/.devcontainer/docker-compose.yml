@@ -1,0 +1,25 @@
+version: '3.2'
+services:
+  jupyterlab:
+    # イメージ名の設定
+    image: work/jupyterlab:1.0
+    build: .
+    # コンテナ名の設定
+    container_name: 'jupyterlab'
+    volumes:
+       - "../work:/home/jovyan/"
+    working_dir: "/home/jovyan/"
+    # ユーザー設定
+    user: root
+    environment:
+      B_UID: 1000
+      NB_GID: 100
+      GRANT_SUDO: "yes"
+    # デバイスへのアクセスを許可
+    privileged: true
+    # ホストの8888とコンテナの8888をマッピング
+    ports:
+      - 8888:8888
+    # コンテナ起動後にjupyterlabを起動
+    command: jupyter-lab --no-browser --port=8888 --ip=0.0.0.0 --allow-root --NotebookApp.token=''
+    

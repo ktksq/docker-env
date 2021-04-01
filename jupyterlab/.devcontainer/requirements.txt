@@ -1,0 +1,5 @@
+numpy == 1.19.0
+matplotlib == 3.2.2
+psycopg2-binary
+Poetry
+jupyterlab

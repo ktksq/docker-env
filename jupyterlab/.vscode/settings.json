@@ -1,0 +1,4 @@
+{
+  "python.dataScience.jupyterServerURI": "http://localhost:8888/",
+  "jupyter.jupyterServerType": "remote"
+}

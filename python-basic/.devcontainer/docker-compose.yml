@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+  python:
+    image: work/python:1.0
+    build: .
+    working_dir: '/tmp/work'
+    volumes: 
+      - ../work:/tmp/work
+    environment:
+        TZ: "Asia/Tokyo"
+    stdin_open: true
+    tty: true
+    command: bash
+    

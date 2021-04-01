@@ -1,0 +1,21 @@
+{
+    "name": "JupyterLab",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "jupyterlab",
+    "workspaceFolder": "/home/jovyan/",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "jupyter.alwaysTrustNotebooks": true,
+        "editor.tabSize": 2
+    },
+    "extensions": [
+        "ms-python.python",
+        "hookyqr.beautify",
+        "lacroixdavid1.vscode-format-context-menu",
+        "oderwat.indent-rainbow",
+        "ionutvmi.path-autocomplete",
+        "chrmarti.regex",
+        "humao.rest-client",
+        "wayou.vscode-icons-mac"
+    ]
+}
